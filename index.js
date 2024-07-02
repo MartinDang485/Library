@@ -1,24 +1,37 @@
 const myLibrary = [];
 
+//Constructor for book object
 function book(title, author, page) {
     this.title = title;
     this.author = author;
     this.page = page;
 };
 
+//Add book to array
 const addBookToLibrary = (Title, Author, Page) => {
     let newBook = new book(Title, Author, Page);
     myLibrary.push(newBook);
     displayBooks();
 };
 
+//displays books
 const displayBooks = () => {
     let display = document.getElementById('display');
     display.innerHTML = '';
     for(let i = 0; i < myLibrary.length; i++) {
+        //Creates new element to display book
         let bookElement = document.createElement('div');
         bookElement.textContent = `Title: ${myLibrary[i].title}, Author: ${myLibrary[i].author}, Pages: ${myLibrary[i].page}`;
         display.appendChild(bookElement);
+
+        //Delete button
+        let bookDelete = document.createElement('button');
+        display.appendChild(bookDelete);
+        bookDelete.addEventListener('click', () => {
+            myLibrary.splice(myLibrary[i],1);
+            display.removeChild(bookElement);
+            display.removeChild(bookDelete);
+        });
     };
 };
 
@@ -29,7 +42,7 @@ submitButton.addEventListener('click', () => {
     let Author = document.getElementById('author').value;
     let Page = document.getElementById('page').value;
     
-    
+
     addBookToLibrary(Title, Author, Page);
     
     //Must clear value before next entry, or else it will just delete 

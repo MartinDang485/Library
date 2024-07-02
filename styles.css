@@ -1,0 +1,29 @@
+.create-section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#title {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#author {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#page {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#submit {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#submit:hover {
+    cursor: pointer;
+}
