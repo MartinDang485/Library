@@ -23,10 +23,13 @@ const displayBooks = () => {
         let bookElement = document.createElement('div');
         bookElement.textContent = `Title: ${myLibrary[i].title}, Author: ${myLibrary[i].author}, Pages: ${myLibrary[i].page}`;
         display.appendChild(bookElement);
+        bookElement.setAttribute("id", "section");
 
         //Delete button
         let bookDelete = document.createElement('button');
-        display.appendChild(bookDelete);
+        bookElement.appendChild(bookDelete);
+        bookDelete.setAttribute('id', "delete");
+        bookDelete.innerText = 'Delete';
         bookDelete.addEventListener('click', () => {
             myLibrary.splice(myLibrary[i],1);
             display.removeChild(bookElement);

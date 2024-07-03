@@ -1,7 +1,33 @@
+body {
+    margin: 0;
+    font-family: "Hero Main Text", sans-serif;
+}
+/* top banner section */
+.Banner {
+    background-color: gray;
+    padding: .75vh;
+}
+
+#libraryHeader {
+    color: white;
+}
+
+.newEntry{
+    display: flex;
+    justify-content: center;
+}
+
+#createEntry {
+    
+}
+
+/* create section */
 .create-section {
     display: flex;
     justify-content: center;
     text-align: center;
+    padding-bottom: 5vh;
+    margin-top: 3vh;
 }
 
 #title {
@@ -22,8 +48,27 @@
 #submit {
     padding: 5px;
     border-radius: 5px;
+    background-color: lightblue;
 }
 
 #submit:hover {
+    opacity: .5;
     cursor: pointer;
+}
+
+/* book section */
+#section {
+    height: 5vh;
+    border: 1px solid;
+    
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#delete {
+    width: 50px;
+    padding: 5px;
+    border-radius: 5px;
+    
 }
