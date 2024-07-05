@@ -60,7 +60,7 @@ body {
 #section {
     height: 5vh;
     border: 1px solid;
-    
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     
@@ -70,5 +70,9 @@ body {
     width: 50px;
     padding: 5px;
     border-radius: 5px;
-    
+}
+
+#delete :cursor {
+    cursor: pointer;
+    opacity: .3;
 }
